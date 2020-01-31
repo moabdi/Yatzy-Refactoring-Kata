@@ -1,3 +1,5 @@
+package moabdi.yatzy.kata;
+
 import org.junit.*;
 import static org.junit.Assert.*;
 
