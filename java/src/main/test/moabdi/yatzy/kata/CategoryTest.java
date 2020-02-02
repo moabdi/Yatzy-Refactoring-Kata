@@ -61,7 +61,7 @@ public class CategoryTest {
 
   @Test
   public void shouldEvaluateHasFullHouseReturnFalse() {
-    assertFalse(FULL_HOUSE.evaluate(ONE, ONE, ONE, TWO, THREE));
+    assertFalse(FULL_HOUSE.evaluate(ONE, ONE, ONE, ONE, ONE));
   }
 
   @Test

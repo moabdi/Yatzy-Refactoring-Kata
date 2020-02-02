@@ -65,9 +65,8 @@ public enum Category {
   }
 
   private static Predicate<List<Dice>> hasFullHouse() {
-    return dice -> dice.stream()
-        .filter(current -> frequency(dice, current) >= 2)
-        .collect(Collectors.toSet()).size() == new HashSet<>(dice).size();
+    return dice -> dice.stream().anyMatch(current -> frequency(dice, current) == 3)
+            && new HashSet<>(dice).size() == 2;
   }
 
   private static Predicate<List<Dice>> allDiceMatch(List<Dice> dices) {
